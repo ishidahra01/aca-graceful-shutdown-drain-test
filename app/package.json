@@ -1,0 +1,14 @@
+{
+  "name": "aca-graceful-shutdown-drain-test-app",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Verification app for Azure Container Apps graceful shutdown and readiness drain behavior.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test server.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
