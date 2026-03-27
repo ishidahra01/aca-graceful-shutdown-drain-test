@@ -118,7 +118,7 @@ terminationGracePeriodSeconds=30 or 120
 ## 1. ローカルでアプリを確認
 
 ```bash
-cd /home/runner/work/aca-graceful-shutdown-drain-test/aca-graceful-shutdown-drain-test/app
+cd app
 npm test
 npm start
 ```
@@ -142,7 +142,7 @@ export LOCATION='japaneast'
 export PREFIX='acadrain'
 export RESOURCE_GROUP="${PREFIX}-rg"
 
-cd /home/runner/work/aca-graceful-shutdown-drain-test/aca-graceful-shutdown-drain-test
+cd <repo-root>
 ./scripts/deploy-bootstrap.sh "$SUBSCRIPTION_ID" "$LOCATION" "$PREFIX" "$RESOURCE_GROUP"
 ```
 
