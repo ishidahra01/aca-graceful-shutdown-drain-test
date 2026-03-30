@@ -1,22 +1,26 @@
 # ACA graceful shutdown / readiness drain test
 
-Azure Container Apps (ACA) のスケールイン時に、`Client -> Application Gateway -> ACA` 構成でどこまで ELB の connection draining に近い挙動を再現できるかを確認するための最小構成 Repo です。
+Azure Container Apps (ACA) のスケールイン時に、`Client -> Application Gateway -> ACA` 構成で Pattern B の graceful shutdown / readiness drain をどう成立させるかを確認するための最小構成 Repo です。
 
 この Repo は次を提供します。
 
 - Bicep による Azure リソース作成
 - `SIGTERM` を受けたときの graceful shutdown / readiness drain を観測しやすい Node.js アプリ
-- 長時間リクエスト・継続短時間リクエスト・スケールイン・単一リビジョン更新の再現スクリプト
+- 同一 revision autoscaler shrink・継続短時間リクエスト・単一リビジョン更新の再現スクリプト
 - README だけで最初から最後まで追える実行手順
 
 > 参照は Microsoft Learn を優先しています。特に `SIGTERM` と 30 秒既定の終了猶予、readiness probe の意味、single revision での traffic cutover、Application Gateway + ACA 構成については、README 末尾の公式リンクを参照してください。
 
 ## 結論サマリー
 
-- **ACA 単体でできること**: `SIGTERM` に反応してアプリが終了処理を行うこと、`terminationGracePeriodSeconds` の範囲内で既存処理の完了を待つこと、readiness probe を fail させて replica を ready から外すこと。
+- **最終的に確認できたこと**: same-revision autoscaler shrink と Application Gateway 経由の request 完走は同じ run の中で両立できます。
+- **この Repo で確立した Pattern B の構成**: `DRAIN_READINESS_ON_SIGTERM=true`, `REJECT_NEW_REQUESTS_ON_DRAIN=true`, `terminationGracePeriodSeconds=120`, `revisionMode=Single`, `concurrentRequests=5`, `minReplicas=1`, `maxReplicas=5`。
+- **検証の成立条件**: active revision が変わらないこと、request が `200` で完走すること、removed replica で `shutdown.signal`, `readiness.changed`, `shutdown.exit` が取れること。
+- **ACA 単体でできること**: `SIGTERM` に反応して終了処理を行うこと、`terminationGracePeriodSeconds` の範囲内で既存処理の完了を待つこと、readiness probe を fail させて replica を ready から外すこと。
 - **アプリ実装が必要なこと**: `SIGTERM` 受信時のログ出力、readiness fail への切替、必要に応じた新規受付拒否、進行中リクエスト数の可視化。
-- **Application Gateway を前段に置く場合の注意点**: Application Gateway 側のバックエンド正常性評価が ACA readiness の変化を追従するまで短い遅延があり得るため、readiness fail と同時にアプリ側でも新規受付拒否を有効にしておくと安全です。
 - **ELB 的な draining と完全同等か**: **完全同等ではなく近似実現**です。ACA は `SIGTERM` と readiness probe を使ってかなり近い動作を作れますが、LB からの即時除外を単独プロパティ 1 つで保証するわけではないため、アプリ実装を組み合わせる前提です。
+
+最終結果だけ確認したい場合は [reports/pattern-b-same-revision-autoscale-report-20260330.md](reports/pattern-b-same-revision-autoscale-report-20260330.md) を参照してください。
 
 ## Repo 構成
 
@@ -32,6 +36,7 @@ Azure Container Apps (ACA) のスケールイン時に、`Client -> Application 
 │   └── main.bicep
 ├── scripts/
 │   ├── build-image.sh
+│   ├── autoscale-shrink-test.sh
 │   ├── deploy-app.sh
 │   ├── deploy-bootstrap.sh
 │   ├── query-logs.sh
@@ -103,7 +108,7 @@ terminationGracePeriodSeconds=30 or 120
 
 - `SIGTERM` 後すぐ `readiness.changed` が出る
 - `/health/ready` が `503` になる
-- Application Gateway の probe が追従すると対象 replica への新規流入が止まる
+- backend health の追従後に対象 replica への新規流入が止まりやすくなる
 - 万一リクエストが到達しても `request.rejected` で `503` を返せる
 - 進行中リクエストは grace period 内で完了を待てる
 
@@ -168,6 +173,23 @@ ACR_NAME=$(az acr list --resource-group "$RESOURCE_GROUP" --query "[0].name" -o 
 
 ## 4. ACA App + Private DNS + Application Gateway をデプロイ
 
+### 最終検証で使った推奨構成
+
+元の目的に対して最終的に成立した構成は次です。
+
+```bash
+./scripts/deploy-app.sh "$RESOURCE_GROUP" "$PREFIX" v1 120 true Single 5 1 5 600
+```
+
+意味:
+
+- `terminationGracePeriodSeconds=120`: 進行中リクエストに待機猶予を与える
+- `DRAIN_READINESS_ON_SIGTERM=true`: SIGTERM 時に readiness を落とす
+- `REJECT_NEW_REQUESTS_ON_DRAIN=true`: drain 中の新規受付をアプリ側でも止める
+- `revisionMode=Single`: 検証対象を same-revision shrink に限定する
+- `concurrentRequests=5`: probe 相当の定常トラフィックで無駄な scale-out を起こしにくくする
+- `minReplicas=1`, `maxReplicas=5`: 同一 revision 内の autoscaler 増減を許可する
+
 ### パターン A (readiness 制御なし)
 
 ```bash
@@ -180,19 +202,9 @@ ACR_NAME=$(az acr list --resource-group "$RESOURCE_GROUP" --query "[0].name" -o 
 ./scripts/deploy-app.sh "$RESOURCE_GROUP" "$PREFIX" v1 120 true Single
 ```
 
-### パターン B / 同一 revision autoscaler shrink 用の推奨ベースライン
+### 同一 revision autoscaler shrink の前提
 
 純粋な autoscaler shrink を見たい場合は、scale 設定を先に 1 回だけ作り、その後の試験中は `az containerapp update --min-replicas/--max-replicas` を呼ばないでください。
-
-```bash
-./scripts/deploy-app.sh "$RESOURCE_GROUP" "$PREFIX" v1 120 true Single 5 1 5 600
-```
-
-この例の意味:
-
-- `concurrentRequests=5`: App Gateway / readiness probe の定常トラフィックで無駄に scale-out しにくくする
-- `minReplicas=1`, `maxReplicas=5`: autoscaler が同一 revision 内で増減できるようにする
-- `appGatewayRequestTimeout=600`: 120 秒超の長時間リクエストを gateway 側で 504 にしないようにする
 
 > この Repo の構成では ACA Environment 自体は internal ですが、Application Gateway から到達させる Container App の ingress は `external=true` にしています。ACA の `external=false` は「同一 Container Apps environment 内からのみ到達可能」の扱いであり、VNet 上の Application Gateway や VM からは到達できません。
 > `concurrentRequests=1` は、この構成では低すぎます。Application Gateway の backend probe や readiness / liveness 系の定常アクセスまで scaler が拾い、アイドルなのに複数 replica から落ちなくなることがありました。
@@ -231,7 +243,7 @@ echo "$ACA_FQDN"
 ./scripts/scale-in-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6
 ```
 
-これは revision-scoped な設定更新を使うため、`Single` revision mode では pure autoscaler shrink ではなく revision replacement の検証になります。
+これは revision-scoped な設定更新を使うため、`Single` revision mode では pure autoscaler shrink の主検証ではなく比較用です。
 
 ### 5-3b. 同一 revision の autoscaler shrink を検証
 
@@ -266,21 +278,21 @@ echo "$ACA_FQDN"
 
 ### 5-3c. 遅延投入で App Gateway 完走と shrink を重ねる
 
-240 秒問題を切り離して本来の目的を検証するには、long request を長くするのではなく shrink 窓に寄せて投入します。
+本来の目的を検証するには、long request を極端に長くするのではなく、自然な shrink 窓に寄せて投入します。
 
-例として、事前計測で `loadStoppedAt` から `firstScaleReductionAt` までが約 330 秒なら、60 秒 request を 240 秒後に投入します。
+まず `loadStoppedAt` から `firstScaleReductionAt` までの遅延を測り、その値に合わせて request 投入時刻を決めます。
 
 ```bash
-./scripts/autoscale-shrink-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6 0.2 1 60 2 900 240
+./scripts/autoscale-shrink-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6 0.2 1 60 2 900 360
 ```
 
 この例の意味:
 
-- `longParallelism=1`: long request を 1 本だけ流す
-- `longDurationSeconds=60`: App Gateway 240 秒 ceiling のノイズを避ける
-- `delayBeforeLongSeconds=240`: load stop から 240 秒待ってから long request を投入する
+- `longParallelism=1`: validation request を 1 本だけ流す
+- `longDurationSeconds=60`: request 完走と shrink の両立確認に必要な長さだけを使う
+- `delayBeforeLongSeconds=360`: 事前計測した shrink 遅延に合わせて request を遅延投入する
 
-判定の基本は次です。
+この Repo の主検証はこの手順です。判定の基本は次です。
 
 - App Gateway 経由の long request が `200` で完走する
 - app log に同じ `request.start` と `request.end` が出る
@@ -329,8 +341,8 @@ WORKSPACE_ID=$(az monitor log-analytics workspace show --resource-group "$RESOUR
 ./scripts/query-request-correlation.sh \
   "$WORKSPACE_ID" \
   8 \
-  230,260,360 \
-  agw-threshold-230-rerun-1774851728,agw-threshold-260-rerun-1774851969,agw-baseline-after-pip15-1774847733
+  60 \
+  long-1-1774858050860
 ```
 
 このスクリプトは次を 1 つの JSON にまとめます。
@@ -357,22 +369,21 @@ ContainerAppConsoleLogs_CL
 
 ## 7. 成功 / 失敗判定基準
 
-### 成功例 (パターン B)
+### 成功例 (今回の最終目標)
 
-- 同一 replica で次の順にログが出る
-  1. `shutdown.signal`
-  2. `readiness.changed` (`ready=false`)
-  3. その後は新規 `request.start` が止まる、または少数の `request.rejected` のみ
-  4. 既存 long request の `request.end`
-  5. `shutdown.exit`
-- Application Gateway backend health が unhealthy に遷移
-- `terminationGracePeriodSeconds` の範囲内で long request が完了
+- active revision が変わらない
+- short load 停止後に replica 数だけが減る
+- shrink 窓に寄せた validation request が App Gateway 経由で `200` 完走する
+- app log に同じ request の `request.start` と `request.end` が出る
+- removed replica で `shutdown.signal`, `readiness.changed`, `shutdown.exit` が出る
+- public `/health/ready` が継続して `200` を返す
 
 ### 失敗例
 
-- `SIGTERM` 後も対象 replica に継続的に新規 `request.start` が入る
-- 進行中 long request が `request.end` を出さずに途切れる
-- grace period を超えて `shutdown.exit` が出ず、強制終了が疑われる
+- active revision が途中で変わる
+- request が `200` で完走しない
+- removed replica に shutdown 系イベントが出ない
+- replica が減らず、same-revision shrink が確認できない
 
 ## 8. サンプルログ
 
@@ -407,13 +418,8 @@ az group delete --name "$RESOURCE_GROUP" --yes --no-wait
 
 ## Microsoft Learn / 公式参照
 
-- Application lifecycle management in Azure Container Apps  
-  https://learn.microsoft.com/en-us/azure/container-apps/application-lifecycle-management
-- Health probes in Azure Container Apps  
-  https://learn.microsoft.com/en-us/azure/container-apps/health-probes
-- Update and deploy changes in Azure Container Apps  
-  https://learn.microsoft.com/en-us/azure/container-apps/revisions
-- Microsoft.App/containerApps template reference  
-  https://learn.microsoft.com/en-us/azure/templates/microsoft.app/containerapps
-- Protect Azure Container Apps with Application Gateway / WAF  
-  https://learn.microsoft.com/en-us/azure/container-apps/waf-app-gateway
+- [Application lifecycle management in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/application-lifecycle-management)
+- [Health probes in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/health-probes)
+- [Update and deploy changes in Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/revisions)
+- [Microsoft.App/containerApps template reference](https://learn.microsoft.com/en-us/azure/templates/microsoft.app/containerapps)
+- [Protect Azure Container Apps with Application Gateway / WAF](https://learn.microsoft.com/en-us/azure/container-apps/waf-app-gateway)
