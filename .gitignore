@@ -3,3 +3,5 @@ app/node_modules/
 coverage/
 .tmp/
 .DS_Store
+.agw-az-account.json
+.copilot-rerun.*
