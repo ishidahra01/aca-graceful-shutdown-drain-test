@@ -1,0 +1,1446 @@
+Initial active revision: acadrain-app--0000007
+Started 6 short-load workers
+Replica count: 2
+Scale-out confirmed; stopping short load and waiting for natural shrink
+Long requests disabled; measuring shrink timing only
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 2 (revision: acadrain-app--0000007)
+Replica count after load stop: 1 (revision: acadrain-app--0000007)
+{
+  "initialRevision": "acadrain-app--0000007\r",
+  "loadStoppedAt": "2026-03-30T07:51:43Z",
+  "loadStopReplicaCount": 2,
+  "peakReplicaCountAfterLoadStop": 2,
+  "firstScaleReductionAt": "2026-03-30T07:59:06Z",
+  "delayBeforeLongSeconds": 0,
+  "longParallelism": 0,
+  "longDurationSeconds": 60,
+  "longDelayStartedAt": "",
+  "longStartedAt": "",
+  "longCompletedAt": "",
+  "stopAfterFirstScaleReduction": true,
+  "stoppedAfterFirstScaleReduction": true,
+  "scaledOut": true,
+  "shrunk": false,
+  "replicaTimeline": [
+    {
+      "utc": "2026-03-30T07:51:29Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:51:43Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:52:03Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:52:22Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:52:39Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:52:58Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:53:21Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:53:40Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:54:01Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:54:22Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:54:45Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:55:07Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:55:28Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:55:49Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:56:10Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:56:31Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:56:51Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:57:11Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:57:31Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:57:51Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:58:11Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:58:31Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 2
+    },
+    {
+      "utc": "2026-03-30T07:58:50Z",
+      "revision": "acadrain-app--0000007\r",
+      "replicas": 1
+    }
+  ],
+  "longResults": [],
+  "probeResults": [
+    {
+      "utc": "2026-03-30T07:51:43Z",
+      "requestId": "probe-1774857103534",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857103534\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1761,\"requestsCompleted\":1760,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:46Z",
+      "requestId": "probe-1774857105915",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857105915\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1762,\"requestsCompleted\":1761,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:48Z",
+      "requestId": "probe-1774857108315",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857108315\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":96,\"requestsCompleted\":95,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:51Z",
+      "requestId": "probe-1774857110723",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857110723\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1763,\"requestsCompleted\":1762,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:53Z",
+      "requestId": "probe-1774857113182",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857113182\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1764,\"requestsCompleted\":1763,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:55Z",
+      "requestId": "probe-1774857115576",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857115576\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":97,\"requestsCompleted\":96,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:51:58Z",
+      "requestId": "probe-1774857117981",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857117981\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1765,\"requestsCompleted\":1764,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:00Z",
+      "requestId": "probe-1774857120393",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857120393\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1766,\"requestsCompleted\":1765,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:03Z",
+      "requestId": "probe-1774857122832",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857122832\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":98,\"requestsCompleted\":97,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:05Z",
+      "requestId": "probe-1774857125252",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857125252\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":99,\"requestsCompleted\":98,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:08Z",
+      "requestId": "probe-1774857127671",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857127671\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1767,\"requestsCompleted\":1766,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:10Z",
+      "requestId": "probe-1774857130090",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857130090\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1768,\"requestsCompleted\":1767,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:12Z",
+      "requestId": "probe-1774857132502",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857132502\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":100,\"requestsCompleted\":99,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:15Z",
+      "requestId": "probe-1774857134895",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857134895\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":101,\"requestsCompleted\":100,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:17Z",
+      "requestId": "probe-1774857137285",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857137285\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1769,\"requestsCompleted\":1768,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:20Z",
+      "requestId": "probe-1774857139691",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857139691\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":102,\"requestsCompleted\":101,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:22Z",
+      "requestId": "probe-1774857142250",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857142250\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":103,\"requestsCompleted\":102,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:25Z",
+      "requestId": "probe-1774857144674",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857144674\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1770,\"requestsCompleted\":1769,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:27Z",
+      "requestId": "probe-1774857147071",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857147071\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":104,\"requestsCompleted\":103,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:29Z",
+      "requestId": "probe-1774857149471",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857149471\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1771,\"requestsCompleted\":1770,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:32Z",
+      "requestId": "probe-1774857151887",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857151887\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":105,\"requestsCompleted\":104,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:34Z",
+      "requestId": "probe-1774857154309",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857154309\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1772,\"requestsCompleted\":1771,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:37Z",
+      "requestId": "probe-1774857156748",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857156748\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":106,\"requestsCompleted\":105,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:39Z",
+      "requestId": "probe-1774857159196",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857159196\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1773,\"requestsCompleted\":1772,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:41Z",
+      "requestId": "probe-1774857161623",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857161623\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":107,\"requestsCompleted\":106,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:44Z",
+      "requestId": "probe-1774857164036",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857164036\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1774,\"requestsCompleted\":1773,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:46Z",
+      "requestId": "probe-1774857166449",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857166449\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":108,\"requestsCompleted\":107,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:49Z",
+      "requestId": "probe-1774857168845",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857168845\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1775,\"requestsCompleted\":1774,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:51Z",
+      "requestId": "probe-1774857171342",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857171342\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":109,\"requestsCompleted\":108,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:54Z",
+      "requestId": "probe-1774857173783",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857173783\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1776,\"requestsCompleted\":1775,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:56Z",
+      "requestId": "probe-1774857176217",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857176217\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1777,\"requestsCompleted\":1776,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:52:59Z",
+      "requestId": "probe-1774857178653",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857178653\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":110,\"requestsCompleted\":109,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:01Z",
+      "requestId": "probe-1774857181072",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857181072\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":111,\"requestsCompleted\":110,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:03Z",
+      "requestId": "probe-1774857183511",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857183511\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1778,\"requestsCompleted\":1777,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:06Z",
+      "requestId": "probe-1774857185946",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857185946\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":112,\"requestsCompleted\":111,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:08Z",
+      "requestId": "probe-1774857188373",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857188373\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1779,\"requestsCompleted\":1778,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:11Z",
+      "requestId": "probe-1774857190774",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857190774\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":113,\"requestsCompleted\":112,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:13Z",
+      "requestId": "probe-1774857193176",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857193176\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":114,\"requestsCompleted\":113,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:15Z",
+      "requestId": "probe-1774857195595",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857195595\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1780,\"requestsCompleted\":1779,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:18Z",
+      "requestId": "probe-1774857198017",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857198017\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":115,\"requestsCompleted\":114,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:21Z",
+      "requestId": "probe-1774857200510",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857200510\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1781,\"requestsCompleted\":1780,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:23Z",
+      "requestId": "probe-1774857203076",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857203076\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":116,\"requestsCompleted\":115,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:25Z",
+      "requestId": "probe-1774857205492",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857205492\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1782,\"requestsCompleted\":1781,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:28Z",
+      "requestId": "probe-1774857207915",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857207915\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":117,\"requestsCompleted\":116,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:30Z",
+      "requestId": "probe-1774857210307",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857210307\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":118,\"requestsCompleted\":117,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:33Z",
+      "requestId": "probe-1774857212705",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857212705\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1783,\"requestsCompleted\":1782,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:35Z",
+      "requestId": "probe-1774857215179",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857215179\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1784,\"requestsCompleted\":1783,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:38Z",
+      "requestId": "probe-1774857217704",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857217704\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1785,\"requestsCompleted\":1784,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:40Z",
+      "requestId": "probe-1774857220105",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857220105\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":119,\"requestsCompleted\":118,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:42Z",
+      "requestId": "probe-1774857222498",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857222498\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1786,\"requestsCompleted\":1785,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:45Z",
+      "requestId": "probe-1774857224956",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857224956\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":120,\"requestsCompleted\":119,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:47Z",
+      "requestId": "probe-1774857227365",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857227365\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":121,\"requestsCompleted\":120,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:50Z",
+      "requestId": "probe-1774857229922",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857229922\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1787,\"requestsCompleted\":1786,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:52Z",
+      "requestId": "probe-1774857232373",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857232373\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1788,\"requestsCompleted\":1787,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:55Z",
+      "requestId": "probe-1774857234814",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857234814\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":122,\"requestsCompleted\":121,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:53:57Z",
+      "requestId": "probe-1774857237235",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857237235\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1789,\"requestsCompleted\":1788,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:00Z",
+      "requestId": "probe-1774857239634",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857239634\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":123,\"requestsCompleted\":122,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:02Z",
+      "requestId": "probe-1774857242094",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857242094\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1790,\"requestsCompleted\":1789,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:04Z",
+      "requestId": "probe-1774857244534",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857244534\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":124,\"requestsCompleted\":123,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:07Z",
+      "requestId": "probe-1774857246940",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857246940\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":125,\"requestsCompleted\":124,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:09Z",
+      "requestId": "probe-1774857249367",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857249367\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1791,\"requestsCompleted\":1790,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:12Z",
+      "requestId": "probe-1774857251770",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857251770\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1792,\"requestsCompleted\":1791,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:14Z",
+      "requestId": "probe-1774857254200",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857254200\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":126,\"requestsCompleted\":125,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:17Z",
+      "requestId": "probe-1774857256836",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857256836\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1793,\"requestsCompleted\":1792,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:19Z",
+      "requestId": "probe-1774857259300",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857259300\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":127,\"requestsCompleted\":126,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:22Z",
+      "requestId": "probe-1774857261875",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857261875\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1794,\"requestsCompleted\":1793,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:24Z",
+      "requestId": "probe-1774857264388",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857264388\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":128,\"requestsCompleted\":127,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:27Z",
+      "requestId": "probe-1774857266846",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857266846\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1795,\"requestsCompleted\":1794,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:29Z",
+      "requestId": "probe-1774857269254",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857269254\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":129,\"requestsCompleted\":128,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:32Z",
+      "requestId": "probe-1774857271659",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857271659\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":130,\"requestsCompleted\":129,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:34Z",
+      "requestId": "probe-1774857274088",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857274088\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1796,\"requestsCompleted\":1795,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:36Z",
+      "requestId": "probe-1774857276508",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857276508\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1797,\"requestsCompleted\":1796,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:39Z",
+      "requestId": "probe-1774857278960",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857278960\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":131,\"requestsCompleted\":130,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:41Z",
+      "requestId": "probe-1774857281389",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857281389\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":132,\"requestsCompleted\":131,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:44Z",
+      "requestId": "probe-1774857283773",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857283773\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1798,\"requestsCompleted\":1797,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:46Z",
+      "requestId": "probe-1774857286197",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857286197\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1799,\"requestsCompleted\":1798,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:49Z",
+      "requestId": "probe-1774857288603",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857288603\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":133,\"requestsCompleted\":132,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:51Z",
+      "requestId": "probe-1774857291107",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857291107\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1800,\"requestsCompleted\":1799,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:53Z",
+      "requestId": "probe-1774857293554",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857293554\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":134,\"requestsCompleted\":133,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:56Z",
+      "requestId": "probe-1774857295958",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857295958\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1801,\"requestsCompleted\":1800,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:54:58Z",
+      "requestId": "probe-1774857298388",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857298388\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1802,\"requestsCompleted\":1801,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:01Z",
+      "requestId": "probe-1774857300785",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857300785\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":135,\"requestsCompleted\":134,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:03Z",
+      "requestId": "probe-1774857303195",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857303195\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1803,\"requestsCompleted\":1802,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:05Z",
+      "requestId": "probe-1774857305617",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857305617\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":136,\"requestsCompleted\":135,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:08Z",
+      "requestId": "probe-1774857308051",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857308051\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":137,\"requestsCompleted\":136,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:10Z",
+      "requestId": "probe-1774857310451",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857310451\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1804,\"requestsCompleted\":1803,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:13Z",
+      "requestId": "probe-1774857312859",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857312859\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":138,\"requestsCompleted\":137,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:15Z",
+      "requestId": "probe-1774857315263",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857315263\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1805,\"requestsCompleted\":1804,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:18Z",
+      "requestId": "probe-1774857317659",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857317659\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1806,\"requestsCompleted\":1805,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:20Z",
+      "requestId": "probe-1774857320096",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857320096\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":139,\"requestsCompleted\":138,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:22Z",
+      "requestId": "probe-1774857322564",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857322564\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1807,\"requestsCompleted\":1806,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:25Z",
+      "requestId": "probe-1774857324977",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857324977\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":140,\"requestsCompleted\":139,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:27Z",
+      "requestId": "probe-1774857327431",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857327431\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1808,\"requestsCompleted\":1807,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:30Z",
+      "requestId": "probe-1774857329827",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857329827\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1809,\"requestsCompleted\":1808,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:32Z",
+      "requestId": "probe-1774857332234",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857332234\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":141,\"requestsCompleted\":140,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:34Z",
+      "requestId": "probe-1774857334617",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857334617\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1810,\"requestsCompleted\":1809,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:37Z",
+      "requestId": "probe-1774857337047",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857337047\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":142,\"requestsCompleted\":141,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:39Z",
+      "requestId": "probe-1774857339459",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857339459\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":143,\"requestsCompleted\":142,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:42Z",
+      "requestId": "probe-1774857341866",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857341866\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1811,\"requestsCompleted\":1810,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:44Z",
+      "requestId": "probe-1774857344262",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857344262\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1812,\"requestsCompleted\":1811,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:47Z",
+      "requestId": "probe-1774857346658",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857346658\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":144,\"requestsCompleted\":143,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:49Z",
+      "requestId": "probe-1774857349150",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857349150\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1813,\"requestsCompleted\":1812,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:51Z",
+      "requestId": "probe-1774857351576",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857351576\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":145,\"requestsCompleted\":144,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:54Z",
+      "requestId": "probe-1774857354035",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857354035\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1814,\"requestsCompleted\":1813,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:56Z",
+      "requestId": "probe-1774857356439",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857356439\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":146,\"requestsCompleted\":145,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:55:59Z",
+      "requestId": "probe-1774857358853",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857358853\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1815,\"requestsCompleted\":1814,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:01Z",
+      "requestId": "probe-1774857361255",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857361255\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":147,\"requestsCompleted\":146,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:04Z",
+      "requestId": "probe-1774857363681",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857363681\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":148,\"requestsCompleted\":147,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:06Z",
+      "requestId": "probe-1774857366096",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857366096\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1816,\"requestsCompleted\":1815,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:08Z",
+      "requestId": "probe-1774857368527",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857368527\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":149,\"requestsCompleted\":148,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:11Z",
+      "requestId": "probe-1774857370931",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857370931\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1817,\"requestsCompleted\":1816,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:13Z",
+      "requestId": "probe-1774857373318",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857373318\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":150,\"requestsCompleted\":149,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:16Z",
+      "requestId": "probe-1774857375739",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857375739\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1818,\"requestsCompleted\":1817,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:18Z",
+      "requestId": "probe-1774857378176",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857378176\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1819,\"requestsCompleted\":1818,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:21Z",
+      "requestId": "probe-1774857380622",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857380622\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":151,\"requestsCompleted\":150,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:23Z",
+      "requestId": "probe-1774857383086",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857383086\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":152,\"requestsCompleted\":151,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:25Z",
+      "requestId": "probe-1774857385540",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857385540\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1821,\"requestsCompleted\":1820,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:28Z",
+      "requestId": "probe-1774857387958",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857387958\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":153,\"requestsCompleted\":152,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:30Z",
+      "requestId": "probe-1774857390380",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857390380\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":154,\"requestsCompleted\":153,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:33Z",
+      "requestId": "probe-1774857392783",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857392783\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1822,\"requestsCompleted\":1821,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:35Z",
+      "requestId": "probe-1774857395204",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857395204\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":155,\"requestsCompleted\":154,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:37Z",
+      "requestId": "probe-1774857397616",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857397616\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1823,\"requestsCompleted\":1822,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:40Z",
+      "requestId": "probe-1774857400045",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857400045\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":156,\"requestsCompleted\":155,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:42Z",
+      "requestId": "probe-1774857402476",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857402476\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1824,\"requestsCompleted\":1823,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:45Z",
+      "requestId": "probe-1774857404900",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857404900\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":157,\"requestsCompleted\":156,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:47Z",
+      "requestId": "probe-1774857407352",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857407352\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1825,\"requestsCompleted\":1824,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:50Z",
+      "requestId": "probe-1774857409824",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857409824\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1826,\"requestsCompleted\":1825,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:52Z",
+      "requestId": "probe-1774857412262",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857412262\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-2742p\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":158,\"requestsCompleted\":157,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T07:44:09.138Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:55Z",
+      "requestId": "probe-1774857414668",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857414668\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1827,\"requestsCompleted\":1826,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:57Z",
+      "requestId": "probe-1774857417109",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857417109\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1828,\"requestsCompleted\":1827,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:56:59Z",
+      "requestId": "probe-1774857419528",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857419528\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1829,\"requestsCompleted\":1828,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:02Z",
+      "requestId": "probe-1774857421973",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857421973\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1830,\"requestsCompleted\":1829,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:04Z",
+      "requestId": "probe-1774857424378",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857424378\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1831,\"requestsCompleted\":1830,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:07Z",
+      "requestId": "probe-1774857426781",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857426781\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1832,\"requestsCompleted\":1831,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:09Z",
+      "requestId": "probe-1774857429165",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857429165\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1833,\"requestsCompleted\":1832,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:11Z",
+      "requestId": "probe-1774857431575",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857431575\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1834,\"requestsCompleted\":1833,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:14Z",
+      "requestId": "probe-1774857433974",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857433974\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1835,\"requestsCompleted\":1834,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:16Z",
+      "requestId": "probe-1774857436363",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857436363\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1836,\"requestsCompleted\":1835,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:19Z",
+      "requestId": "probe-1774857438773",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857438773\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1837,\"requestsCompleted\":1836,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:21Z",
+      "requestId": "probe-1774857441231",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857441231\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1838,\"requestsCompleted\":1837,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:23Z",
+      "requestId": "probe-1774857443626",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857443626\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1839,\"requestsCompleted\":1838,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:26Z",
+      "requestId": "probe-1774857446039",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857446039\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1840,\"requestsCompleted\":1839,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:28Z",
+      "requestId": "probe-1774857448472",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857448472\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1841,\"requestsCompleted\":1840,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:31Z",
+      "requestId": "probe-1774857450868",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857450868\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1842,\"requestsCompleted\":1841,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:33Z",
+      "requestId": "probe-1774857453267",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857453267\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1843,\"requestsCompleted\":1842,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:36Z",
+      "requestId": "probe-1774857455676",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857455676\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1844,\"requestsCompleted\":1843,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:38Z",
+      "requestId": "probe-1774857458123",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857458123\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1845,\"requestsCompleted\":1844,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:40Z",
+      "requestId": "probe-1774857460545",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857460545\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1846,\"requestsCompleted\":1845,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:43Z",
+      "requestId": "probe-1774857462945",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857462945\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1847,\"requestsCompleted\":1846,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:45Z",
+      "requestId": "probe-1774857465337",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857465337\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1848,\"requestsCompleted\":1847,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:48Z",
+      "requestId": "probe-1774857467749",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857467749\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1849,\"requestsCompleted\":1848,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:50Z",
+      "requestId": "probe-1774857470167",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857470167\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1850,\"requestsCompleted\":1849,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:53Z",
+      "requestId": "probe-1774857472660",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857472660\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1851,\"requestsCompleted\":1850,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:55Z",
+      "requestId": "probe-1774857475069",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857475069\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1852,\"requestsCompleted\":1851,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:57:57Z",
+      "requestId": "probe-1774857477493",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857477493\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1853,\"requestsCompleted\":1852,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:00Z",
+      "requestId": "probe-1774857479887",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857479887\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1854,\"requestsCompleted\":1853,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:02Z",
+      "requestId": "probe-1774857482285",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857482285\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1855,\"requestsCompleted\":1854,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:05Z",
+      "requestId": "probe-1774857484724",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857484724\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1856,\"requestsCompleted\":1855,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:07Z",
+      "requestId": "probe-1774857487207",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857487207\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1857,\"requestsCompleted\":1856,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:09Z",
+      "requestId": "probe-1774857489610",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857489610\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1858,\"requestsCompleted\":1857,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:12Z",
+      "requestId": "probe-1774857492014",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857492014\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1859,\"requestsCompleted\":1858,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:14Z",
+      "requestId": "probe-1774857494420",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857494420\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1860,\"requestsCompleted\":1859,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:17Z",
+      "requestId": "probe-1774857496803",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857496803\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1861,\"requestsCompleted\":1860,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:19Z",
+      "requestId": "probe-1774857499236",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857499236\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1862,\"requestsCompleted\":1861,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:22Z",
+      "requestId": "probe-1774857501716",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857501716\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1863,\"requestsCompleted\":1862,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:24Z",
+      "requestId": "probe-1774857504126",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857504126\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1864,\"requestsCompleted\":1863,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:26Z",
+      "requestId": "probe-1774857506526",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857506526\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1865,\"requestsCompleted\":1864,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:29Z",
+      "requestId": "probe-1774857508927",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857508927\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1866,\"requestsCompleted\":1865,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:31Z",
+      "requestId": "probe-1774857511323",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857511323\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1867,\"requestsCompleted\":1866,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:34Z",
+      "requestId": "probe-1774857513739",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857513739\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1868,\"requestsCompleted\":1867,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:36Z",
+      "requestId": "probe-1774857516151",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857516151\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1869,\"requestsCompleted\":1868,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:38Z",
+      "requestId": "probe-1774857518556",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857518556\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1870,\"requestsCompleted\":1869,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:41Z",
+      "requestId": "probe-1774857520966",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857520966\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1871,\"requestsCompleted\":1870,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:43Z",
+      "requestId": "probe-1774857523389",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857523389\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1872,\"requestsCompleted\":1871,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:46Z",
+      "requestId": "probe-1774857525832",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857525832\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1873,\"requestsCompleted\":1872,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:48Z",
+      "requestId": "probe-1774857528249",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857528249\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1874,\"requestsCompleted\":1873,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:51Z",
+      "requestId": "probe-1774857530687",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857530687\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1875,\"requestsCompleted\":1874,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:53Z",
+      "requestId": "probe-1774857533187",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857533187\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1876,\"requestsCompleted\":1875,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:55Z",
+      "requestId": "probe-1774857535570",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857535570\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1877,\"requestsCompleted\":1876,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:58:58Z",
+      "requestId": "probe-1774857538005",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857538005\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1878,\"requestsCompleted\":1877,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:59:00Z",
+      "requestId": "probe-1774857540417",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857540417\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1879,\"requestsCompleted\":1878,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:59:03Z",
+      "requestId": "probe-1774857542833",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857542833\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1880,\"requestsCompleted\":1879,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    },
+    {
+      "utc": "2026-03-30T07:59:05Z",
+      "requestId": "probe-1774857545244",
+      "status": "200",
+      "body": "{\"ok\":true,\"requestId\":\"probe-1774857545244\",\"durationSeconds\":0,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1881,\"requestsCompleted\":1880,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}",
+      "kind": "probe"
+    }
+  ],
+  "artifacts": "/tmp/tmp.bZnpJC9c8E"
+}

@@ -1,0 +1,16 @@
+{
+  "requestId": "long-autoscale4timeout600-1774845016",
+  "clientResult": {
+    "ok": false,
+    "httpStatus": 504,
+    "error": "curl: (22) The requested URL returned error: 504"
+  },
+  "appLogEvidence": {
+    "replica": "acadrain-app--0000007-7b7786c677-rj8df",
+    "startedAt": "2026-03-30T04:30:23.537Z",
+    "endedAt": "2026-03-30T04:36:23.538Z",
+    "elapsedMs": 360001,
+    "path": "/work?duration=360"
+  },
+  "interpretation": "The request completed inside the app on the surviving replica, but the client still received 504 through Application Gateway."
+}

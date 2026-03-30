@@ -1,0 +1,49 @@
+{
+  "testStart": "2026-03-30T04:30:11.0100315Z",
+  "initialRevision": "acadrain-app--0000007",
+  "initialReplicas": [
+    "acadrain-app--0000007-7b7786c677-rj8df"
+  ],
+  "scaledOut": true,
+  "scaleOutAt": "2026-03-30T04:30:17.9962705Z",
+  "shrunk": true,
+  "shrinkAt": "2026-03-30T04:37:34.9865718Z",
+  "finalRevision": "acadrain-app--0000007",
+  "finalReplicaNames": [
+    "acadrain-app--0000007-7b7786c677-rj8df"
+  ],
+  "removedReplicas": [
+    "acadrain-app--0000007-7b7786c677-52h4d"
+  ],
+  "longRequest": {
+    "requestId": "long-autoscale4timeout600-1774845016",
+    "clientResult": {
+      "ok": false,
+      "httpStatus": 504,
+      "error": "curl: (22) The requested URL returned error: 504"
+    },
+    "appLogEvidence": {
+      "replica": "acadrain-app--0000007-7b7786c677-rj8df",
+      "startedAt": "2026-03-30T04:30:23.537Z",
+      "endedAt": "2026-03-30T04:36:23.538Z",
+      "elapsedMs": 360001,
+      "path": "/work?duration=360"
+    }
+  },
+  "finalBackendHealth": {
+    "health": "Healthy",
+    "address": "acadrain-app.agreeablesand-53836cf5.canadaeast.azurecontainerapps.io",
+    "detail": "Success. Received 200 status code"
+  },
+  "publicReady": {
+    "statusCode": 200,
+    "ok": true,
+    "error": null
+  },
+  "artifacts": {
+    "replicaTimelineFile": "reports/pattern-b-autoscale-rerun-replica-timeline.ndjson",
+    "healthTimelineFile": "reports/pattern-b-autoscale-health-3.ndjson",
+    "shutdownLogsFile": "reports/pattern-b-autoscale-rerun-shutdown-logs.json",
+    "debugFile": "reports/pattern-b-autoscale-rerun-debug.log"
+  }
+}

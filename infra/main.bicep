@@ -33,6 +33,9 @@ param maxReplicas int = 5
 @description('HTTP concurrent request threshold used by the http KEDA scaler.')
 param concurrentRequests int = 5
 
+@description('Application Gateway backend request timeout in seconds.')
+param appGatewayRequestTimeout int = 120
+
 @description('Internal ACA default domain, obtained after bootstrap deployment.')
 param privateDnsZoneName string
 
@@ -71,25 +74,45 @@ resource appGatewaySubnet 'Microsoft.Network/virtualNetworks/subnets@2023-11-01'
   name: appGatewaySubnetName
 }
 
+var acrPullRoleDefinitionId = subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
+
+resource acrPullIdentity 'Microsoft.ManagedIdentity/userAssignedIdentities@2023-01-31' = {
+  name: '${containerAppName}-id'
+  location: resourceGroup().location
+}
+
+resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
+  name: guid(acr.id, acrPullIdentity.id, 'acrpull')
+  scope: acr
+  properties: {
+    principalId: acrPullIdentity.properties.principalId
+    principalType: 'ServicePrincipal'
+    roleDefinitionId: acrPullRoleDefinitionId
+  }
+}
+
 resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
   name: containerAppName
   location: resourceGroup().location
   identity: {
-    type: 'SystemAssigned'
+    type: 'UserAssigned'
+    userAssignedIdentities: {
+      '${acrPullIdentity.id}': {}
+    }
   }
   properties: {
     managedEnvironmentId: managedEnvironment.id
     configuration: {
       activeRevisionsMode: revisionMode
       ingress: {
-        external: false
+        external: true
         targetPort: targetPort
         transport: 'auto'
       }
       registries: [
         {
           server: acr.properties.loginServer
-          identity: 'system'
+          identity: acrPullIdentity.id
         }
       ]
     }
@@ -166,18 +189,9 @@ resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
       }
     }
   }
-}
-
-var acrPullRoleDefinitionId = subscriptionResourceId('Microsoft.Authorization/roleDefinitions', '7f951dda-4ed3-4680-a7ca-43fe172d538d')
-
-resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-01' = {
-  name: guid(acr.id, containerApp.name, 'acrpull')
-  scope: acr
-  properties: {
-    principalId: containerApp.identity.principalId
-    principalType: 'ServicePrincipal'
-    roleDefinitionId: acrPullRoleDefinitionId
-  }
+  dependsOn: [
+    acrPullRoleAssignment
+  ]
 }
 
 resource privateDnsZone 'Microsoft.Network/privateDnsZones@2020-06-01' = {
@@ -199,7 +213,20 @@ resource privateDnsZoneVirtualNetworkLink 'Microsoft.Network/privateDnsZones/vir
 
 resource wildcardRecord 'Microsoft.Network/privateDnsZones/A@2020-06-01' = {
   parent: privateDnsZone
-        name: '*'
+  name: '*'
+  properties: {
+    ttl: 30
+    aRecords: [
+      {
+        ipv4Address: managedEnvironmentStaticIp
+      }
+    ]
+  }
+}
+
+resource apexRecord 'Microsoft.Network/privateDnsZones/A@2020-06-01' = {
+  parent: privateDnsZone
+  name: '@'
   properties: {
     ttl: 30
     aRecords: [
@@ -221,7 +248,7 @@ resource publicIp 'Microsoft.Network/publicIPAddresses@2023-11-01' = {
   }
 }
 
-resource applicationGateway 'Microsoft.Network/applicationGateways@2023-11-01' = {
+resource applicationGateway 'Microsoft.Network/applicationGateways@2024-10-01' = {
   name: applicationGatewayName
   location: resourceGroup().location
   properties: {
@@ -296,10 +323,10 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2023-11-01' =
           protocol: 'Https'
           cookieBasedAffinity: 'Disabled'
           pickHostNameFromBackendAddress: true
-          requestTimeout: 120
           probe: {
             id: resourceId('Microsoft.Network/applicationGateways/probes', applicationGatewayName, appGatewayProbeName)
           }
+          requestTimeout: appGatewayRequestTimeout
         }
       }
     ]
@@ -339,6 +366,7 @@ resource applicationGateway 'Microsoft.Network/applicationGateways@2023-11-01' =
   dependsOn: [
     privateDnsZoneVirtualNetworkLink
     wildcardRecord
+    apexRecord
     acrPullRoleAssignment
   ]
 }

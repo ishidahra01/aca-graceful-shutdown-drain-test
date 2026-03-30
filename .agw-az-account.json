@@ -1,0 +1,18 @@
+{
+  "environmentName": "AzureCloud",
+  "homeTenantId": "58970528-d083-476f-9082-2d21bd11a800",
+  "id": "2646574e-c696-4eb5-ae81-7ce607612833",
+  "isDefault": true,
+  "managedByTenants": [
+    {
+      "tenantId": "72f988bf-86f1-41af-91ab-2d7cd011db47"
+    }
+  ],
+  "name": "ME-MngEnvMCAP873995-hishida-1",
+  "state": "Enabled",
+  "tenantId": "58970528-d083-476f-9082-2d21bd11a800",
+  "user": {
+    "name": "hishida@MngEnvMCAP873995.onmicrosoft.com",
+    "type": "user"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "requestId": "agw-baseline-60-1774857579",
+  "startUtc": "2026-03-30T07:59:38.5846338Z",
+  "endUtc": "2026-03-30T08:00:39.1064764Z",
+  "elapsedSeconds": 60.52,
+  "ok": true,
+  "exitCode": 0,
+  "error": null,
+  "body": "{\"ok\":true,\"requestId\":\"agw-baseline-60-1774857579\",\"durationSeconds\":60,\"replica\":\"acadrain-app--0000007-7b7786c677-rj8df\",\"pid\":1,\"port\":8080,\"readiness\":true,\"draining\":false,\"sigtermAt\":null,\"exitAt\":null,\"activeRequests\":1,\"requestsStarted\":1882,\"requestsCompleted\":1881,\"requestsRejected\":0,\"startedAt\":\"2026-03-30T01:06:10.397Z\"}"
+}

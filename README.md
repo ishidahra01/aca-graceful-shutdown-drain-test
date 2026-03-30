@@ -35,6 +35,7 @@ Azure Container Apps (ACA) のスケールイン時に、`Client -> Application 
 │   ├── deploy-app.sh
 │   ├── deploy-bootstrap.sh
 │   ├── query-logs.sh
+│   ├── query-request-correlation.sh
 │   ├── revision-test.sh
 │   ├── run-long-requests.sh
 │   ├── run-short-requests.sh
@@ -179,6 +180,23 @@ ACR_NAME=$(az acr list --resource-group "$RESOURCE_GROUP" --query "[0].name" -o 
 ./scripts/deploy-app.sh "$RESOURCE_GROUP" "$PREFIX" v1 120 true Single
 ```
 
+### パターン B / 同一 revision autoscaler shrink 用の推奨ベースライン
+
+純粋な autoscaler shrink を見たい場合は、scale 設定を先に 1 回だけ作り、その後の試験中は `az containerapp update --min-replicas/--max-replicas` を呼ばないでください。
+
+```bash
+./scripts/deploy-app.sh "$RESOURCE_GROUP" "$PREFIX" v1 120 true Single 5 1 5 600
+```
+
+この例の意味:
+
+- `concurrentRequests=5`: App Gateway / readiness probe の定常トラフィックで無駄に scale-out しにくくする
+- `minReplicas=1`, `maxReplicas=5`: autoscaler が同一 revision 内で増減できるようにする
+- `appGatewayRequestTimeout=600`: 120 秒超の長時間リクエストを gateway 側で 504 にしないようにする
+
+> この Repo の構成では ACA Environment 自体は internal ですが、Application Gateway から到達させる Container App の ingress は `external=true` にしています。ACA の `external=false` は「同一 Container Apps environment 内からのみ到達可能」の扱いであり、VNet 上の Application Gateway や VM からは到達できません。
+> `concurrentRequests=1` は、この構成では低すぎます。Application Gateway の backend probe や readiness / liveness 系の定常アクセスまで scaler が拾い、アイドルなのに複数 replica から落ちなくなることがありました。
+
 デプロイ後に接続先を取得します。
 
 ```bash
@@ -212,6 +230,62 @@ echo "$ACA_FQDN"
 ```bash
 ./scripts/scale-in-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6
 ```
+
+これは revision-scoped な設定更新を使うため、`Single` revision mode では pure autoscaler shrink ではなく revision replacement の検証になります。
+
+### 5-3b. 同一 revision の autoscaler shrink を検証
+
+純粋な autoscaler shrink を見たい場合は、負荷を止めるだけで縮退させます。
+
+```bash
+./scripts/autoscale-shrink-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6 0.2 0 60 2 900
+```
+
+流れ:
+
+1. 短時間リクエストで scale-out させる
+2. 短時間リクエストだけ止める
+3. autoscaler が同一 revision 内で replica を減らすのを待つ
+4. `longParallelism=0` のときは shrink 遅延の測定だけを行う
+
+このときの観点:
+
+- active revision が変わっていないこと
+- replica 数だけが減っていること
+- App Gateway backend health が `Healthy` を維持するか
+- app log に `readiness.changed`, `shutdown.signal`, `shutdown.exit` が出るか
+
+戻り値の JSON には次も含まれます。
+
+- `loadStoppedAt`
+- `firstScaleReductionAt`
+- `loadStopReplicaCount`
+- `peakReplicaCountAfterLoadStop`
+
+これで、負荷停止から実際の shrink 開始までの遅延をまず 2〜3 回測れます。
+
+### 5-3c. 遅延投入で App Gateway 完走と shrink を重ねる
+
+240 秒問題を切り離して本来の目的を検証するには、long request を長くするのではなく shrink 窓に寄せて投入します。
+
+例として、事前計測で `loadStoppedAt` から `firstScaleReductionAt` までが約 330 秒なら、60 秒 request を 240 秒後に投入します。
+
+```bash
+./scripts/autoscale-shrink-test.sh "$RESOURCE_GROUP" "$APP_NAME" "$APP_GATEWAY_URL" 6 0.2 1 60 2 900 240
+```
+
+この例の意味:
+
+- `longParallelism=1`: long request を 1 本だけ流す
+- `longDurationSeconds=60`: App Gateway 240 秒 ceiling のノイズを避ける
+- `delayBeforeLongSeconds=240`: load stop から 240 秒待ってから long request を投入する
+
+判定の基本は次です。
+
+- App Gateway 経由の long request が `200` で完走する
+- app log に同じ `request.start` と `request.end` が出る
+- 同じ試験窓で removed replica の `shutdown.signal`, `readiness.changed`, `shutdown.exit` が回収できる
+- active revision が変わらない
 
 ### 5-4. 単一リビジョン更新 (パターン C)
 
@@ -247,6 +321,22 @@ Workspace ID を取得し、`scripts/query-logs.sh` を使います。
 WORKSPACE_ID=$(az monitor log-analytics workspace show --resource-group "$RESOURCE_GROUP" --workspace-name "${PREFIX}-law" --query customerId -o tsv)
 ./scripts/query-logs.sh "$WORKSPACE_ID" 1 shutdown.signal
 ```
+
+App Gateway access log と app log を request 単位で突き合わせたい場合は、`scripts/query-request-correlation.sh` を使います。
+
+```bash
+WORKSPACE_ID=$(az monitor log-analytics workspace show --resource-group "$RESOURCE_GROUP" --workspace-name "${PREFIX}-law" --query customerId -o tsv)
+./scripts/query-request-correlation.sh \
+  "$WORKSPACE_ID" \
+  8 \
+  230,260,360 \
+  agw-threshold-230-rerun-1774851728,agw-threshold-260-rerun-1774851969,agw-baseline-after-pip15-1774847733
+```
+
+このスクリプトは次を 1 つの JSON にまとめます。
+
+- `AzureDiagnostics` の `ApplicationGatewayAccessLog`
+- `ContainerAppConsoleLogs_CL` の `request.start` / `request.end`
 
 直接 KQL を使う場合:
 
